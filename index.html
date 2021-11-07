@@ -23,22 +23,32 @@
     <link rel="stylesheet" href="scss/styles.css">
 </head>
 <body>
+    <div class="nav">
+        <div><a href="#Home">Home</a></div>
+        <div><a href="#study">study</a></div>
+        <div><a href="#skills">skills</a></div>
+        <div><a href="#contact">down</a></div>
+    </div>
 
-    <div class="main_div">
+    <div class="main_div" id="Home">
             <div class="wrapper">
                 <div class="header">
                     <div class="main_heading"><h2>プラモド</h2></div>
-                    <div class="menu_button">
+                    <!-- <div class="menu_button">
                         <div class="first_line"></div>
                         <div class="second_line"></div>
                         <div class="third_line"></div>
-                    </div>
+                    </div> -->
                 </div>
             
                 <div class="main_content">
                     <div class="first_text">Hi there!! I'm</div>
                     <div class="second_text">KILLI</div>
                     <div class="third_text">Student at national institute of technology raipur</div>
+                    <div class="resume">
+                        <a href="images/Killi's Resume(1).pdf" download>RESUME</a>
+
+                    </div>
                     <div class="scroll_icon">
                         <div class="left_arrow"></div>
                         <div class="right_arrow"></div>
@@ -50,7 +60,7 @@
             
             
         </div>
-        <div class="study">
+        <div class="study" id="study">
             <div class="heading_study">
                 <h1>Study :</h1>
             </div>
@@ -73,7 +83,7 @@
             </div>
         </div>
 
-        <div class="skills">
+        <div class="skills" id="skills">
             <div>
                 <h1>Skills :</h1>
             </div>
@@ -87,17 +97,30 @@
         </div>
 
 
-        <div class="footer">
+        <div class="footer" id="contact">
             <div>
                 <div>Contact information :</div>
                 <div class="footer_wrapper">
                     <div class="light">Feel free to contact me. You can contact me through my social media or through email or phone </div>
                     <div>
-                        Email : killipramodh7@gmail.com <br>
-                        phone : +919390392507
+                        <span class="light">
+                            Email :
+                        </span>
+                        <a href = "mailto: killipramodh7@gmail.com">killipramodh7@gmail.com</a>
+                         <br>
+
+                         <span class="light">phone :</span>
+                         <a href="tel:+917036006109">+917036006109</a>
                     </div>
-                </div>
-                
+                </div>    
+            </div>
+
+            <div class="social">
+                <div><img src="https://img.icons8.com/ios-glyphs/30/121212/facebook.png"/></div>
+                <div><img src="https://img.icons8.com/ios-glyphs/30/121212/instagram-new.png"/></div>
+                <div><img src="https://img.icons8.com/ios-glyphs/30/121212/twitter--v1.png"/></div>
+                <div><img src="https://img.icons8.com/ios-glyphs/30/121212/linkedin-2--v1.png"/></div>
+                <div><img src="https://img.icons8.com/ios-glyphs/30/121212/github.png"/></div>
             </div>
         </div>
 <script src="scss/app.js"></script>
