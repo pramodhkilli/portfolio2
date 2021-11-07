@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
+    color: #09f755;
+    max-width: 100vw;
+    height: 100vh;
+
+    .main_div{
+        max-width: 100vw;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        section {
+            max-width: 100vw;
+            overflow-x: hidden;
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+    }
+}
+
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1.8rem;
+    position: sticky;
+    .main_heading{
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .menu_button{
+        div{
+            background-color: white;
+            // width: 1.25rem;
+            height: 0.1rem;
+            margin: 0.25rem;
+        }
+
+        .first_line {
+            width: 0.6rem;
+        }
+
+        .second_line {
+            width: 0.9rem;
+        }
+
+        .third_line {
+            width: 1.2rem;
+        }
+    }
+}
+
+.main_content{
+    width: 100vw;
+    padding: 15vh 10vw;
+    position: relative;
+    height: 75vh;
+
+    div{
+        color: white;
+    }
+    .first_text{
+        font-family: 'Roboto Mono', monospace;
+        position: relative;
+        width : max-content;
+    }
+    .first_text::before,.first_text::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .first_text::before{
+        background-color: black;
+        animation: typewriter 5s steps(14) 1s forwards;
+    }
+    .first_text::after{
+        width: 0.1em;
+        height: 1em;
+        background-color: white;
+        animation: typewriter 5s steps(14) 1s forwards,
+                    blink 0.7143s 1s infinite;
+    }
+    .second_text{
+        padding: 0.5rem 0;
+        font-size: 7em;
+        font-family: 'Roboto', sans-serif;
+        opacity: 0;
+        transform: translateY(100%);
+        animation: moveup 2s ease 7s forwards;
+    }
+
+    .third_text {
+        transform: translateY(100%);
+        opacity: 0;
+        animation: moveup 1s ease-in-out 9.25s forwards;
+    }
+
+
+    .scroll_icon{
+        position: absolute;
+        bottom: 0;
+        right: 46%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(300%);
+        animation: arrow 1.5s ease-in-out 10.25s infinite;
+        .left_arrow {
+            background-color: white;
+            margin-right: -0.425em;
+            height: 0.3em;
+            width: 2em;
+            transform: rotate(-45deg);
+        }
+        .right_arrow {
+            background-color: white;
+            margin-left: -0.425em;
+            height: 0.3em;
+            width: 2em;
+            transform: rotate(45deg);
+        }
+    }
+}
+@keyframes arrow {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes typewriter {
+    to{
+        left : 100%;
+    }
+}
+
+@keyframes blink {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes moveup {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.study {
+
+    .heading_study{
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            padding: 1em 1em 3em;
+            // font-size: 3em;
+        }
+    }
+
+    .content_study {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1vw;
+        .block_study {
+            height: 40vh;
+            margin: 1em;
+            background-color: whitesmoke;
+            padding: 1em;
+            max-width: 400px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s ease; 
+
+            &:hover{
+                background-color: grey;
+            }
+
+            div{
+                color: #000000;
+                font-family: 'Roboto', sans-serif;
+                font-size: 2em;
+            }
+            .year {
+                color: orangered;
+                font-size: 6em;
+            }
+        }
+    }
+}
+
+.projects {
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        padding: 2em 1em 3em 1em;
+    }
+
+    .content_projects {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2em;
+
+        .block_projects{
+            height: 45vh;
+            background-color: whitesmoke;
+            color: orangered;
+            // width: 40vw;
+            width: 100%;
+            max-width: 400px;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 10px;
+
+
+        }
+    }
+}
+
+.footer {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(54, 47, 47);
+    color: white;
+
+    .footer_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        div {
+            max-width: 400px;
+            padding: 2em 2em 2em 0;
+        }
+    }
+
+    .light {
+        color: lighten($color: #000000, $amount: 40);
+    }
+
+}
+
+.skills {
+    height: 100vh;
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    transition: all 0.4s;
+
+    &.html{
+        background: url(../html.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &.css{
+        background: url(../css.png);
+        background-size: cover;
+        background-position-x: left;
+        // background: url(../images/casey-horner-pXZxuXmpsNo-unsplash.jpg);
+    }
+
+    &.js{
+        background: url(../js.png);
+        background-size: cover;
+        background-position-x: left;
+    }
+
+    &.cpp {
+        background: url(../c++.png);
+        background-position: cover;
+        background-position: left;
+    }
+
+    &.git {
+        background: url(../git.png);
+        background-position: cover;
+        background-position: left;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .skills_content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 30vh 0;
+
+        &>div{
+            cursor: pointer;
+            width: 70px;
+            height: 70px;
+            margin: 1em;
+            border-radius: 5px;
+            text-align: center;
+            padding: 1.5em 0;
+            border: white 1px solid;
+        }
+    }
+}
